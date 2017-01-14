@@ -1,0 +1,211 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"> 
+<html lang="en">
+<head>
+  <title>Darwin Game 2.2</title>
+</head>
+<body link=#7585b0 vlink=#7585b0>
+
+<script type="text/javascript">
+var xmlhttp
+/*@cc_on @*/
+/*@if (@_jscript_version >= 5)
+  try {
+  xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
+ } catch (e) {
+  try {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  } catch (E) {
+   xmlhttp=false;
+  }
+ }
+@else
+ xmlhttp=false
+ @end @*/
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+try {
+xmlhttp = new XMLHttpRequest();
+} catch (e) {
+xmlhttp=false;
+}
+}
+if (!xmlhttp && window.createRequest) {
+try {
+xmlhttp = window.createRequest();
+} catch (e) {
+xmlhttp=false;
+}
+}
+
+function getContents(url) {
+  // method, url, asynchronous?
+  xmlhttp.open('GET', url, false);
+  xmlhttp.send(null);
+  if (xmlhttp.status != 200) {
+     return "error";
+  } else {
+    return xmlhttp.responseText;
+  }
+
+}
+/*
+Asynchronous example:
+if (xmlhttp) {
+ document.write('<p class="example"><a href="#" onclick="example3();return false;">Try the example.</a></p>')
+}
+function example3() {
+ xmlhttp.open("HEAD", "index.html",true);
+ xmlhttp.onreadystatechange=function() {
+  if (xmlhttp.readyState==4) {
+   alert("File was last modified on - '"+ 
+   //xmlhttp.getAllResponseHeaders() + "'" +
+    xmlhttp.getResponseHeader("Date"))
+  }
+ }
+ xmlhttp.send(null)
+}*/
+</script>
+
+<table width=100%>
+<tr valign=top><td>
+<div style="font-family: Helvetica,Verdana,sans-serif; font-weight: bold; font-size: 80px;">The Darwin Game</div>
+</td>
+<td width=20> </td><td>
+<font face="Arial" style="font-size: 14px;">
+  <br/>
+<center><b>Movies</b></center>
+ <li> <a href="Tortoise.mov">Tortoise</a> on mz_pacman</li>
+ <li> <a href="Sheep-vs-Rover.mov">Sheep vs. Rover</a> on ns_tunnel</li>
+ <li> <a href="Wolf-vs-Sheep.mov">Wolf vs. Sheep</a> on ns_faceoff</li>
+</font>
+</td></tr></table>
+
+
+<blockquote style="text-align: justify; text-justify: newspaper;">
+<img src="darwin2.png" align=right>
+<br/>
+<p>
+Darwin 2.2 is a game that features artificial intelligence creatures
+(i.e., virtual robots) competing to either control a map or be the
+first to complete a task.  <b>You play by programming</b> your own species of
+creature in Java.  Darwin 2.2 is a lab assignment
+in <a href="http://cs.williams.edu/~morgan/cs136">CS136</a>
+at <a href="http://williams.edu">Williams College</a>. Students create
+creatures for specific tasks like navigating a maze or competing for
+survival. This page contains everything that you need to play the
+Darwin Game at Williams, adapt it for your school, or play with your
+programmer friends.
+</p>
+<p>
+ <i>New for 2012: Enchanted apples, shrines, mud, and 4-species natural selection!</i>
+</p>
+
+<h3 style="font-family: Helvetica; border-bottom-style:solid; border-color: #7585b0; color: #7585b0;">Download</h3>
+
+<p>
+The Darwin 2.2 simulator and documentation are below.  You may use
+them for free with attribution, in a course or for your own
+entertainment.  You are even welcome to modify and redistribute the
+code with attribution.  
+</p>
+<p>
+<center>
+<script type = "text/javascript">
+document.write("These files were last updated <b>" + getContents('modifiedDate.html') +".</b>");
+</script>
+<br>
+<table border=1 cellspacing=0 cellpadding=4 width=80%>
+<tr><th>Description</th><th>File</th><th>Contents</th></tr>
+<tr><td>Darwin&nbsp;2.2</td><td><b><a href="darwin2.2.zip">darwin2.2.zip</a></b></td><td>Everything: Simulator, Darwin viewer, sample Creatures, map pack, sprites, player's handbook, reference documentation, and source code</td></tr>
+<tr><td>Player's&nbsp;Handbook</td><td><b><a href="players-handbook.pdf">players-handbook.pdf</a></b></td><td>The handbook describing in detail how to make a creature, the file format descriptions, and the tournament rules</td></tr>
+<tr><td>API</td><td><b><a href="doc/package-summary.html">Online JavaDoc</a></b></td><td>Reference documentation for the full API</td></tr>
+<tr><td>Java</td><td><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u1-download-513651.html">Java SDK</a></td><td>Provided by Oracle.  You only need this if you don't already have a Java compiler installed</td></tr>
+</table></center>
+</p>
+
+<h3 style="font-family: Helvetica; border-bottom-style:solid; border-color: #7585b0; color: #7585b0;">Features</h3>
+
+<p>
+Creatures are programmed in regular Java.  Six actions allow them to
+interact with the simulation world: observe, turnLeft, turnRight,
+move, attack, delay.  Each action has its own specified time cost.  A
+successful attack destroys its target and then spawns a new instance
+of the attacker's creature type.  This allows creatures to reproduce
+and eventually take over the map.  This and the tournament rules
+create a kind of natural selection among species, hence the `Darwin'
+name.
+</p>
+<p>
+The API is extremely simple.  Below is the source code for a robot
+rover that moves in a straight line until it is obstructed, and then
+turns to the left. It attacks anything that it runs into.
+</p>
+
+<p><center>
+<table border=1 cellspacing=0 cellpadding=20><tr><td>
+<pre>
+<font color="#999999">public class Rover extends Creature {
+    public void run() { while (true) {
+</font>
+        if (! moveForward()) {
+            attack();
+            turnLeft();
+        }
+<font color="#999999">
+    }}
+}</font></pre>
+</td></tr></table>
+</center></p>
+
+<p>
+The simulator can be run in text mode or graphical mode.  In graphical
+mode it offers 2D and 3D views and can be paused or set at one of four
+speeds.  The 3D view is shown at the top of this page.  To customize
+your creature's 3D appearance, draw four PNG images. Searching for `3D
+sprite' or `isometric sprite' yields many good results on Google. For
+example, the rover above uses a tweaked Pig Tank from Duke Nukem 3D.
+The maps themselves are created using a simple ASCII format.  They
+support walls, food, treasure, gigantic Venus fly trap monsters, and
+up to 10 competing AI creatures.
+</p>
+
+
+<p>
+I am interested in receiving contributions of new sprite graphics and
+maps by <a href="mailto:morgan@cs.williams.edu">e-mail</a>, and in
+hearing if you use Darwin in a course.  Please do <i>not</i> send
+unsolicited creature subclasses or suggestions for the API.  I don't
+have the resources to evaluate and integrate them.
+</p>
+
+<h3 style="font-family: Helvetica; border-bottom-style:solid; border-color: #7585b0; color: #7585b0;">History</h3>
+
+<p>
+Darwin Game 2.2 was designed by <a
+href="http://cs.williams.edu/~morgan">Morgan McGuire</a>.  The previous 2.0
+version was similar (and the API is backwards compatible!) but required explicit
+synchronization of creatures by the player.  Version 2.1 relieved the
+programmer of that burden to make more sophisticated strategies accessible
+to less experienced programmers.  Version 2.2 introduced new mechanics
+to allow alternative strategies and increased the scale of the maps significantly.
+</p>
+<p>
+Morgan's Darwin was
+inspired by <a href="http://cs.williams.edu/~steve">Steve Freund</a>'s
+<a href="http://cs.williams.edu/~freund/cs136/darwin.pdf">Darwin</a>
+assignment, in which students implemented in Java an interpreter for a
+concurrent assembly language.  That assignment was based on the <a
+href="http://nifty.stanford.edu/darwin/">Darwin's World</a>
+interpreter game invented by <a
+href="http://www-cs-faculty.stanford.edu/~nick/">Nick Parlante</a> and
+implemented in C and Pascal. 
+</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</blockquote>
+</body>
+</html>
