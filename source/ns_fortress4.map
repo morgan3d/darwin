@@ -1,0 +1,32 @@
+31 31 Fortress
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X       # X 0 0 0 0 X       # X
+X         X ##000## X         X
+X  s      X 0 0 0 0 X     s   X
+X   # #   #         #  # #    X
+X    e#     #     #    #e     X
+X   ###   # 3     3 #  ###    X
+X         X         X         X
+X#       1X         Xe       #X
+X       e1X         X00       X
+XXXX# #XXX##       ##XXX# #XXXX
+X         #         #         X
+X #1 #2       f  +      1# 2# X
+X #         ++ +++          # X
+X111         +a a f        222X
+X111         +ea +         222X
+X111        f a a+         222X
+X #          +++ ++         # X
+X #1 #2      + f        1# 2# X
+X         #         #         X
+XXXX# #XXX##       ##XXX# #XXXX
+X       33X         X2e       X
+X#       eX         X2       #X
+X         X         X         X
+X   ###   # 0     0 #   ###   X
+X    e#     #     #     #e    X
+X   # #   #         #   # #   X
+X  s      X 3 3 3 3 X      s  X
+X         X ##333## X         X
+X       # X 3 3 3 3 X #       X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

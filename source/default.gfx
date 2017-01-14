@@ -1,0 +1,7 @@
+"Wall.png"  // X Normal wall
+"Wall2.png" // # Alternative color wall
+"Wall3.png" // % Another alternative color wall
+"Thorn.png" // + Thorns
+"Floor.png" //   Empty ground square
+"Mud.png"   // . Mud
+"Fog.png"   // : Fog

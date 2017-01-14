@@ -1,0 +1,8 @@
+#!/bin/bash
+OSX_ICON=
+
+if [ $(uname) == "Darwin" ] 
+  then
+   OSX_ICON=-Xdock:icon=icon.png
+fi
+java -ea -Dicon=icon.png $OSX_ICON -cp .:./pro:darwin.jar Darwin $@

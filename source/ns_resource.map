@@ -1,0 +1,41 @@
+"AOE.gfx" 40 39 Resource Race
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XX                                    XX
+X   # 1 1  #                #  1 1 #   X
+XX  ########                ########  XX
+X                                      X
+XX                                    %%
+X       a                      a       %
+XX                                    %%
+X                                      %
+XXX  X    XX  XXX X  X XXX  XX    X  %%%
+X  X  XaXX   X            X   XXaX  %  %
+XX  X  X   XX  XX  XX  XX  XX   X  X  %%
+X    X   XX    X X    X X    XX   X    %
+XX    XX    XXX    XX    XXX    XX    %%
+XXX     X  XX X XXX  XXX X XX  X     %%%
+XX   X        X XXXXXXXX X        X   %%
+X      XXXXXX    XXXXXX    XXXXXX      %
+XXaX  a a a  XX    XX    XX  a a a  Xa%%
+X  X a a a a   XX  aa XXX   a a a a X  X
+XXaa%%%%%%%%%%   aXXXXa   XXXXXXXXXXaaXX
+X  % a a a a   XX  aa XXX   a a a a X  X
+%%a%  a a a  XX    %%    XX  a a a  XaXX
+%      XXXXXX    %%%%%%    XXXXXX      X
+%%   X        X %%%%%%%% X        X   XX
+XXX     X  XX X %%%%%%%% X XX  X     XXX
+XX    XX    XXX    %%    XXX    XX    XX
+X    X   XX    X %    X X    XX   X    X
+XX  X  X   XX  %%  XX  XX  XX   X  X  XX
+X  X  XaXX   %            X   XXaX  X  X
+XXX  X    XX  %%% X  X XXX  XX    X  XXX
+X                                      X
+XX                                    XX
+X       a                      a       X
+XX                                    XX
+X                                      X
+XX  ########                ########  XX
+X   # 0 0  #                #  0 0 #   X
+XX                                    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+By Aaron Size

@@ -1,0 +1,31 @@
+"minecraft.gfx" 36 29 Labyrinth (4 player)
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X0  + +      0   ++  1       + +  1X
+X 00 0           ++           1 11 X
+X 00 0 +         ++         + 1 11 X
+X s      ....    ++   ....       s X
+X 00   ........     .........   11 X
+X    . XXXXXXXXX    XXXXXXXXX .    X
+X.++ . X  Xf           Xf   X . ++.X
+X    . X XXXX XXXXXXX XXXXX X .    X
+X      X      X     X       X      X
+X0  ...XXXXXX   XXXXXXXXXXX X...  1X
+X   ...X      XX     aaaa X X...   X
+X   ...X XXXXX   XXX a  a X X...   X
+X+  ...X e        fX aaaaXe X...  +X
+Xe  ...XXXXXXXXXXXXXXXXXXXX X...  eX
+X+  ...X e        fX aaaaXe X...  +X
+X   ...X XXXXX   XXX a  a X X...   X
+X   ...X      XX     aaaa X X...   X
+X2  ...XXXXXX   XXXXXXXXXXX X...  3X
+X      X      X     X       X      X
+X    . X XXXX XXXXXXX XXXXX X .    X
+X.++ . X  Xf           Xf   X . ++.X
+X    . XXXXXXXXX    XXXXXXXXX .    X
+X 22   .........    .........   33 X
+X s      ....    ++   ....       s X
+X 22 2 +         ++         + 3 33 X
+X 22 2           ++           3 33 X
+X2  + +       2  ++  3     + +    3X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Morgan McGuire
